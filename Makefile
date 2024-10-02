@@ -6,10 +6,10 @@ endef
 
 up-sentry:
 	$(call load_env)
-	@docker compose -f docker-compose.sentry.yml up -d
+	@docker compose -f docker-compose.yml up -d
 
 down-sentry:
-	@docker compose -f docker-compose.sentry.yml down
+	@docker compose -f docker-compose.yml down
 
 
 up-traefik:
