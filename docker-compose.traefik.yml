@@ -70,4 +70,4 @@ services:
       - acme-data:/certificates
     ports: ["80:80", "443:443"]
     logging: *formatted-logging
-    networks: [traefik-network]
+    networks: [traefik]
