@@ -7,7 +7,6 @@ networks:
   traefik:
     driver: bridge
     name: traefik-network
-    external: true
 # For services that should use Traefik add `networks: [default, traefik]`
 
 x-restart-policy: &restart_policy
