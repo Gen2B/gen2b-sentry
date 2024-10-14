@@ -557,8 +557,8 @@ services:
   nginx:
     <<: *restart_policy
     container_name: sentry-nginx
-#    ports:
-#      - "$SENTRY_BIND:80/tcp"
+    ports:
+      - "${SENTRY_EXPOSED_PORT:-80}:80/tcp"
     image: "nginx:1.25.4-alpine"
     volumes:
       - type: bind
