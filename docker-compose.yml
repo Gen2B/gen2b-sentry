@@ -134,6 +134,7 @@ services:
       nofile:
         soft: 10032
         hard: 10032
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
 
   postgres:
     <<: *restart_policy
@@ -228,17 +229,6 @@ services:
       interval: 10s
       timeout: 10s
       retries: 30
-
-  geoipupdate:
-    image: "ghcr.io/maxmind/geoipupdate:v6.1.0"
-    container_name: sentry-geoipupdate
-    # Override the entrypoint in order to avoid using envvars for config.
-    # Futz with settings so we can keep mmdb and conf in same dir on host
-    # (image looks for them in separate dirs by default).
-    entrypoint:
-      ["/usr/bin/geoipupdate", "-d", "/sentry", "-f", "/sentry/GeoIP.conf"]
-    volumes:
-      - "./geoip:/sentry"
 
   snuba-api:
     <<: *snuba_defaults

@@ -1,5 +1,27 @@
 # Changelog
 
+## 24.12.1
+
+### Various fixes & improvements
+
+- chore: clearer message for errors-only mode (#3487) by @aldy505
+- chore(relay): provide opt-in max_memory_percent config as workaround for failing healthcheck (#3486) by @aldy505
+- fix(nginx): _assets should rewrite to _static/sentry/dist (#3483) by @BYK
+
+## 24.12.0
+
+- No documented changes.
+
+## 24.11.2
+
+### Various fixes & improvements
+
+- fix(redis): Actually use custom config (#3459) by @BYK
+- feat(release): Replace release bot with GH app (#3458) by @Jeffreyhung
+- chore(issue-template): ask for machine specification and provide link to security policy (#3447) by @aldy505
+- add sentry/backup.json to gitignore (#3450) by @niklassc7
+- ref: remove suggested fix (#3446) by @aldy505
+
 ## 24.11.1
 
 ### Various fixes & improvements
